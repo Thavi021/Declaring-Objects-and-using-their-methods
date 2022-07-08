@@ -1,0 +1,76 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package declaringusingobjects;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Thaveshan Naidoo
+ */
+public class DeclaringUsingObjects {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Employee clerk = new Employee();
+        Employee driver = new Employee();
+        clerk.setEmpNum(001);
+        clerk.setEmpLastName("Naidoo");
+        clerk.setEmpSalary(40000);
+        
+        driver.setEmpNum(011);
+        driver.setEmpLastName("Govender");
+        driver.setEmpSalary(60000);
+        
+        JOptionPane.showMessageDialog(null, "The Clerk Number:"+clerk.getEmpNum()
+                +",The Clerk Name is:"+clerk.getEmpLastName()
+        +",The Clerk Salary is:"+clerk.getEmpSalary());
+        
+        JOptionPane.showMessageDialog(null, "The Clerk Number:"+driver.getEmpNum()
+                +",The Clerk Name is:"+driver.getEmpLastName()
+        +",The Clerk Salary is:"+driver.getEmpSalary());
+    }
+    
+    
+}
+
+class Employee
+{
+    private int empNum;
+    private String empLastName;
+    private String empFirstName;
+    private double empSalary;
+    
+    public int getEmpNum()
+    {
+        return empNum;
+    }
+    public void setEmpNum(int emp)
+    {
+        empNum=emp;
+    }
+    public String getEmpLastName()
+    {
+        return empLastName;
+    }
+    public void setEmpLastName(String name)
+    {
+        empLastName = name;
+    }
+    
+    public double getEmpSalary()
+    {
+    return empSalary;
+    }
+    public void setEmpSalary(double sal)
+    {
+        empSalary=sal;
+    }
+        
+}
